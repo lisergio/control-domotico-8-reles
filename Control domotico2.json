@@ -1,0 +1,473 @@
+{
+	"type": "NetIOConfiguration",
+	"version": 2,
+	"name": "Control domotico",
+	"description": "control de encendidos, termostato y sensores pir con Push",
+	"connections": [
+		{
+			"name": "conection",
+			"host": "192.168.1.150",
+			"port": 3200,
+			"initialsend": "iniciando"
+		}
+	],
+	"pages": [
+		{
+			"name": "Interruptores",
+			"label": "Interruptores",
+			"connection": "conection",
+			"items": [
+				{
+					"top": 200,
+					"left": 20,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA2"
+					]
+				},
+				{
+					"top": 330,
+					"left": 20,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA3"
+					]
+				},
+				{
+					"top": 70,
+					"left": 180,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA5"
+					]
+				},
+				{
+					"top": 200,
+					"left": 180,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA6"
+					]
+				},
+				{
+					"top": 330,
+					"left": 180,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA7"
+					]
+				},
+				{
+					"top": 70,
+					"left": 20,
+					"width": 120,
+					"height": 60,
+					"type": "button",
+					"label": "",
+					"shape": "rounded",
+					"background": "28,232,36",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA1"
+					]
+				},
+				{
+					"top": 420,
+					"left": 40,
+					"width": 240,
+					"height": 50,
+					"type": "button",
+					"label": "APAGAR TODO",
+					"shape": "rounded",
+					"background": "245,17,17",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"sends": [
+						"APAGARTOD"
+					]
+				},
+				{
+					"top": 280,
+					"left": 20,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO3",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 150,
+					"left": 20,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO2",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 20,
+					"left": 20,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO1",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 20,
+					"left": 180,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO5",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 150,
+					"left": 180,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO6",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 280,
+					"left": 180,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "lamp_off",
+					"reads": "ESTADO7",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_lamp_{0}.png"
+				},
+				{
+					"top": 0,
+					"left": 30,
+					"width": 100,
+					"height": 30,
+					"type": "label",
+					"text": "SALON",
+					"textcolor": "230,230,230"
+				},
+				{
+					"top": 0,
+					"left": 180,
+					"width": 120,
+					"height": 30,
+					"type": "label",
+					"text": "BAÑO",
+					"textcolor": "230,230,230"
+				},
+				{
+					"top": 120,
+					"left": 20,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "COCINA",
+					"textcolor": "230,230,230"
+				},
+				{
+					"top": 120,
+					"left": 180,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "DORMITORIO",
+					"textcolor": "230,230,230"
+				},
+				{
+					"top": 250,
+					"left": 20,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "VESTIDOR",
+					"textcolor": "230,230,230"
+				},
+				{
+					"top": 250,
+					"left": 180,
+					"width": 120,
+					"height": 50,
+					"type": "label",
+					"text": "TERRAZA",
+					"textcolor": "230,230,230"
+				}
+			],
+			"width": 320,
+			"height": 568
+		},
+		{
+			"name": "Garaje",
+			"label": "Garaje",
+			"connection": "conection",
+			"sound": "active",
+			"items": [
+				{
+					"top": 50,
+					"left": 40,
+					"width": 240,
+					"height": 240,
+					"type": "button",
+					"label": "SALIDA4",
+					"shape": "circle",
+					"background": "245,15,15",
+					"border": "220,220,220",
+					"textcolor": "0,0,0",
+					"sends": [
+						"SALIDA4"
+					],
+					"icon": "standby"
+				},
+				{
+					"top": 330,
+					"left": 20,
+					"width": 280,
+					"height": 140,
+					"type": "label",
+					"text": "ACCESO GARAJE",
+					"textcolor": "230,230,230",
+					"fontsize": 40
+				}
+			],
+			"fitToScreen": true,
+			"width": 320,
+			"height": 568,
+			"textcolor": "230,230,230",
+			"background": "40,40,40"
+		},
+		{
+			"name": "Termostato",
+			"label": "Termostato",
+			"connection": "conection",
+			"sound": "active",
+			"items": [
+				{
+					"top": 10,
+					"left": 60,
+					"width": 210,
+					"height": 200,
+					"type": "button",
+					"label": "",
+					"shape": "circle",
+					"background": "0,71,255",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"SALIDA8"
+					],
+					"parseResponse": "O[A-Z]+",
+					"formatResponse": "{0}",
+					"icon": "standby"
+				},
+				{
+					"top": 230,
+					"left": 20,
+					"width": 290,
+					"height": 50,
+					"type": "slider",
+					"minValue": 7,
+					"maxValue": 30,
+					"showValue": true,
+					"lowColor": "45,45,45",
+					"highColor": "65,65,65",
+					"knobColor": "55,55,55",
+					"textcolor": "230,230,230",
+					"sends": "SLIDER {value}"
+				},
+				{
+					"top": 260,
+					"left": 0,
+					"width": 320,
+					"height": 150,
+					"type": "label",
+					"text": "",
+					"textcolor": "230,230,230",
+					"reads": "TEMP",
+					"interval": 1500,
+					"parseResponse": "\\d+",
+					"formatResponse": "{0},{1} ºC",
+					"fontsize": 80
+				},
+				{
+					"top": 160,
+					"left": 100,
+					"width": 130,
+					"height": 50,
+					"type": "label",
+					"text": "",
+					"textcolor": "230,230,230",
+					"reads": "ESTADO8",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_{0}.png",
+					"icon": "blue"
+				},
+				{
+					"top": 370,
+					"left": 10,
+					"width": 300,
+					"height": 30,
+					"type": "label",
+					"text": "newLabel",
+					"textcolor": "230,230,230",
+					"icon": "green",
+					"reads": "ESTADOT",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_{0}.png"
+				},
+				{
+					"top": 400,
+					"left": 40,
+					"width": 240,
+					"height": 30,
+					"type": "button",
+					"label": "Reactivar Notificación 15ºC",
+					"shape": "rounded",
+					"background": "143,40,40",
+					"border": "70,70,70",
+					"textcolor": "230,230,230",
+					"sends": [
+						"NOTIFI"
+					]
+				}
+			],
+			"fitToScreen": true,
+			"width": 320,
+			"height": 568,
+			"textcolor": "230,230,230",
+			"background": "40,40,40"
+		},
+		{
+			"name": "Alarma",
+			"label": "Alarma",
+			"connection": "conection",
+			"sound": "active",
+			"items": [
+				{
+					"top": 80,
+					"left": 60,
+					"width": 210,
+					"height": 200,
+					"type": "button",
+					"label": "",
+					"shape": "circle",
+					"background": "255,168,0",
+					"border": "47,35,184",
+					"textcolor": "230,230,230",
+					"sends": [
+						"ALARMA"
+					],
+					"parseResponse": "O[A-Z]+",
+					"formatResponse": "{0}",
+					"icon": "standby"
+				},
+				{
+					"top": 230,
+					"left": 100,
+					"width": 130,
+					"height": 50,
+					"type": "label",
+					"text": "",
+					"textcolor": "230,230,230",
+					"reads": "ESTADOA",
+					"interval": 500,
+					"parseResponse": ".*",
+					"formatResponse": "icon_{0}.png",
+					"icon": "green"
+				},
+				{
+					"top": 310,
+					"left": 20,
+					"width": 280,
+					"height": 90,
+					"type": "label",
+					"text": "ALARMA",
+					"textcolor": "230,230,230",
+					"fontsize": 40
+				}
+			],
+			"fitToScreen": true,
+			"width": 320,
+			"height": 568,
+			"textcolor": "230,230,230",
+			"background": "40,40,40"
+		}
+	],
+	"device": "iPhone 5",
+	"orientation": "portrait",
+	"navigation": "fix",
+	"pagebuttonwidth": "static",
+	"preventSleep": false,
+	"switchOnSwipe": true,
+	"style": "flat",
+	"theme": "dark"
+}
